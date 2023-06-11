@@ -2,62 +2,62 @@ export const navButtons = [
     {
       id: 1,
       title: 'vrtec',
-      imageSrc: '../../../src/assets/images/icons/1-vrtec_vodmat.png'
+      imageSrc: '../../../public/assets/images/icons/1-vrtec_vodmat.png'
     },
     {
       id: 2,
       title: 'ortobar',
-      imageSrc: '../../../src/assets/images/icons/2-ortobar.png'
+      imageSrc: '../../../public/assets/images/icons/2-ortobar.png'
     },
     {
       id: 3,
       title: 'zelezniska-postaja',
-      imageSrc: '../../../src/assets/images/icons/3-zelezniskapostaja.png'
+      imageSrc: '../../../public/assets/images/icons/3-zelezniskapostaja.png'
     },
     {
       id: 4,
       title: 'razgledi',
-      imageSrc: '../../../src/assets/images/icons/4-razgledi.png'
+      imageSrc: '../../../public/assets/images/icons/4-razgledi.png'
     },
     {
       id: 5,
       title: 'resvalna-postaja',
-      imageSrc: '../../../src/assets/images/icons/5-resevalna_postaja.png'
+      imageSrc: '../../../public/assets/images/icons/5-resevalna_postaja.png'
     },
     {
       id: 6,
       title: 'sreca-v-nesreci',
-      imageSrc: '../../../src/assets/images/icons/6-serecavnesreci.png'
+      imageSrc: '../../../public/assets/images/icons/6-serecavnesreci.png'
     },
     {
       id: 7,
       title: 'rdece-drevo',
-      imageSrc: '../../../src/assets/images/icons/7-rdecedrevo.png'
+      imageSrc: '../../../public/assets/images/icons/7-rdecedrevo.png'
     },
     {
       id: 8,
       title: 'porodnisnica',
-      imageSrc: '../../../src/assets/images/icons/8-porodnisnica.png'
+      imageSrc: '../../../public/assets/images/icons/8-porodnisnica.png'
     },
     {
       id: 9,
       title: 'helioport',
-      imageSrc: '../../../src/assets/images/icons/9-helioport.png'
+      imageSrc: '../../../public/assets/images/icons/9-helioport.png'
     },
     {
       id: 10,
       title: 'abeceda',
-      imageSrc: '../../../src/assets/images/icons/10-abeceda.png'
+      imageSrc: '../../../public/assets/images/icons/10-abeceda.png'
     },
     {
       id: 11,
       title: 'vodmatski-trg',
-      imageSrc: '../../../src/assets/images/icons/11-vodmatski_trg.png'
+      imageSrc: '../../../public/assets/images/icons/11-vodmatski_trg.png'
     },
     {
       id: 12,
       title: 'igrisce-in-park',
-      imageSrc: '../../../src/assets/images/icons/12-igrisce_park.png'
+      imageSrc: '../../../public/assets/images/icons/12-igrisce_park.png'
     }
   ]
 
@@ -75,7 +75,7 @@ export const navButtons = [
         title: 'Orto Bar',
         type: 'sound',
         content: {
-          sound: '../../../src/assets/sounds/ortobar.m4a'
+          sound: '../../../publicpublic/assets/sounds/ortobar.m4a'
         }
     },
     {
@@ -84,7 +84,7 @@ export const navButtons = [
         type: 'text+sound',
         content: {
           text:'"SMEŠNA JE TA HIŠA, NIMA OKEN NIMA VRAT, V NJEJ POČAKAŠ, DA PRIDE VLAK."',
-          sound: '../../../src/assets/sounds/vlakpostaja.mp3',
+          sound: '../../../publicpublic/assets/sounds/vlakpostaja.mp3',
           answer: 'Železniška postaja'
         }
     },
@@ -94,10 +94,10 @@ export const navButtons = [
         type: 'sound',
         content: {
           sound: [
-            '../../../src/assets/sounds/razgledi_1.m4a',
-            '../../../src/assets/sounds/razgledi_2.m4a',
-            '../../../src/assets/sounds/razgledi_3.m4a',
-            '../../../src/assets/sounds/razgledi_4.m4a',
+            '../../../publicpublic/assets/sounds/razgledi_1.m4a',
+            '../../../publicpublic/assets/sounds/razgledi_2.m4a',
+            '../../../publicpublic/assets/sounds/razgledi_3.m4a',
+            '../../../publicpublic/assets/sounds/razgledi_4.m4a',
           ]
         }
     },
@@ -116,10 +116,10 @@ export const navButtons = [
         type: 'images',
         content: {
           image: [
-            '../../../src/assets/images/sreca_1.png',
-            '../../../src/assets/images/sreca_2.png',
-            '../../../src/assets/images/sreca_3.png',
-            '../../../src/assets/images/sreca_4.png',
+            '../../../public/assets/images/sreca_1.png',
+            '../../../public/assets/images/sreca_2.png',
+            '../../../public/assets/images/sreca_3.png',
+            '../../../public/assets/images/sreca_4.png',
           ],
           text: [
             'SREČA JE TO DA IMAM SESTRICO, KER ME IMA TAKO RADA IN IMAVA DRUG DRUGEGA. NISEM SAM, Z NJO SE LAHKO IGRAM, SI POMAGAVA IN SKUPAJ DELAVA LUMPARIJE NPR. SI USTRIŽEVA LASE NA SKRIVAJ IN JIH SKRIJEVA POD KAVČ. SREČA V NESREČI JE, DA SE NA PRIMER ZGODI PROMETNA NESREČA ČISTO ZRAVEN BOLNICE.',
@@ -142,11 +142,11 @@ export const navButtons = [
             'BOLNI S POMOČJO RDEČIH LISTKOV HITRO OZDRAVIJO.'
           ],
           image: [
-            '../../../src/assets/images/rd_1.png',
-            '../../../src/assets/images/rd_2.png',
-            '../../../src/assets/images/rd_3.png',
-            '../../../src/assets/images/rd_4.png',
-            '../../../src/assets/images/rd_5.png',
+            '../../../public/assets/images/rd_1.png',
+            '../../../public/assets/images/rd_2.png',
+            '../../../public/assets/images/rd_3.png',
+            '../../../public/assets/images/rd_4.png',
+            '../../../public/assets/images/rd_5.png',
           ]
         },
     },
@@ -155,7 +155,7 @@ export const navButtons = [
         title: 'Porodnišnica',
         type: 'image',
         content: {
-          image: '../../../src/assets/images/dojenclni.gif'
+          image: '../../../public/assets/images/dojenclni.gif'
         }   
     },
     {
@@ -164,7 +164,7 @@ export const navButtons = [
         type: 'text',
         content: {
           text: 'NI PTICA, ČEPRAV IMA KRILA, V SVOJEM TRBUŠČKU PILOTA, ZDRAVNIKA IN PACIENTA SKRIVA. ',
-          sound: '../../../src/assets/sounds/helikopter.aac'
+          sound: '../../../public/assets/sounds/helikopter.aac'
         }
     },
     {
@@ -172,7 +172,7 @@ export const navButtons = [
         title: 'Abeceda',
         type: 'image',
         content: {
-          image: '../../../src/assets/images/Pametnjakovic-strip.png'
+          image: '../../../public/assets/images/Pametnjakovic-strip.png'
         }
     },
     {
@@ -188,7 +188,7 @@ export const navButtons = [
         title: 'Igrišce in park',
         type: 'image',
         content: {
-          image: '../../../src/assets/images/park_skratki.png'
+          image: '../../../public/assets/images/park_skratki.png'
         }
     },
   ]
