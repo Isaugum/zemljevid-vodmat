@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { contentContent } from '../../../core/content/content';
 import { PaginationButtons, SlideshowComponent, SoundComponent } from '..';
 import { useState } from 'react';
+import LazyLoad from 'react-lazy-load';
 
 interface ContentProps {
   contentID: number;
@@ -55,7 +56,10 @@ const ContentWindow = ({ contentID, closeContent }: ContentProps ) => {
             {
               contentData.content.image && (
               !Array.isArray(contentData.content.image) ?
-              <img src={contentData.content.image} alt={contentData.title} style={{ width: '17rem'}} />
+              <LazyLoad>
+                <img src={contentData.content.image} alt={contentData.title} style={{ maxHeight: '17rem', maxWidth: '17rem'}} />
+              </LazyLoad>
+              
               :
               contentData.content.text &&
               <SlideshowComponent

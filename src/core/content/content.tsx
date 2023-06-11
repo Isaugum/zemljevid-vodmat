@@ -52,7 +52,7 @@ export const navButtons = [
     {
       id: 11,
       title: 'vodmatski-trg',
-      imageSrc: 'c/assets/images/icons/11-vodmatski_trg.png'
+      imageSrc: '/assets/images/icons/11-vodmatski_trg.png'
     },
     {
       id: 12,

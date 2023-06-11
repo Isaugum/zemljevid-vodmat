@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { PaginationButtons } from '../PaginationButtons/PaginationButtons'
 import './style/slideshow.scss';
+import LazyLoad from 'react-lazy-load';
+
 
 interface SlideshowProps {
   imageArray: string[];
@@ -27,7 +29,9 @@ const SlideshowComponent = ({ imageArray, textArray, textShown, currentPage, set
             textShown === true ?
             <p>{textArray[currentPage - 1]}</p>
             :
-            <img src={imageArray[currentPage - 1]} alt='' />
+            <LazyLoad>
+             <img src={imageArray[currentPage - 1]} alt='' /> 
+            </LazyLoad>
           }
           </motion.div>
         </AnimatePresence>

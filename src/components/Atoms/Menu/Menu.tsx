@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './style/menu.css';
 import { navButtons } from '../../../core/content/content';
 import { AnimatePresence, motion } from 'framer-motion';
+import LazyLoad from 'react-lazy-load';
 
 interface MenuProps {
   setContentID: (id: number) => void;
@@ -43,7 +44,9 @@ const Menu = ({ setContentID, contentState, openContent }: MenuProps) => {
                   {
                     navButtons.map((btn: any) => <button key= {btn.title} className='nav-btn' 
                     onClick={() => handleMenuButtonClick(btn.id)}>
-                      <img className='btn-image' src={btn.imageSrc} alt={btn.title}/>
+                      <LazyLoad>
+                        <img className='btn-image' src={btn.imageSrc} alt={btn.title}/>  
+                      </LazyLoad>
                     </button>)
                   }
                 </div>

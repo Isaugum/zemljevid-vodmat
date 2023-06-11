@@ -31,7 +31,7 @@ const PaginationButtons = ({ pagesTotal, currentPage, setCurrentPage, onTextSwit
       {
         onTextSwitch &&
         <button onClick={() => onTextSwitch((value: boolean) => !value)}>
-          <img className='book-img' src='../../../src/assets/images/icons/knjiga.png' alt='knjiga' />
+          <img className='book-img' src='/assets/images/icons/knjiga.png' alt='knjiga' />
         </button>
       }
       <button onClick={() => setPage(currentPage + 1)}>{'>'}
