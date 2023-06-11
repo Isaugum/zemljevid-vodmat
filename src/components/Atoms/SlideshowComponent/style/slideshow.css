@@ -1,0 +1,18 @@
+.image-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17rem;
+}
+.image-text-container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.image-text-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}/*# sourceMappingURL=slideshow.css.map */

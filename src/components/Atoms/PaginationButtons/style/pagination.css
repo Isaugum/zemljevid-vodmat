@@ -1,0 +1,14 @@
+.pagination-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.pagination-container button {
+  height: 2rem;
+  width: 3rem;
+}
+.pagination-container button .book-img {
+  height: 100%;
+}/*# sourceMappingURL=pagination.css.map */

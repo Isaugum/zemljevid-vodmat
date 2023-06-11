@@ -1,0 +1,24 @@
+.image-text-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 17rem;
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+    }
+
+    img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+    }
+}
