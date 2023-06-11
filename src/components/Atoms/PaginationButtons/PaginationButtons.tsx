@@ -1,4 +1,5 @@
 import './style/pagination.scss';
+import LazyLoad from 'react-lazy-load';
 
 interface PaginationProps {
   pagesTotal: number;
@@ -31,7 +32,9 @@ const PaginationButtons = ({ pagesTotal, currentPage, setCurrentPage, onTextSwit
       {
         onTextSwitch &&
         <button onClick={() => onTextSwitch((value: boolean) => !value)}>
-          <img className='book-img' src='/assets/images/icons/knjiga.png' alt='knjiga' />
+          <LazyLoad>
+            <img className='book-img' src='/assets/images/icons/knjiga.png' alt='knjiga' />
+          </LazyLoad>
         </button>
       }
       <button onClick={() => setPage(currentPage + 1)}>{'>'}

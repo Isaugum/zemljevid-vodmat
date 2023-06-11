@@ -42,12 +42,14 @@ const Menu = ({ setContentID, contentState, openContent }: MenuProps) => {
           >
                 <div className='btn-container'>
                   {
-                    navButtons.map((btn: any) => <button key= {btn.title} className='nav-btn' 
-                    onClick={() => handleMenuButtonClick(btn.id)}>
-                      <LazyLoad>
-                        <img className='btn-image' src={btn.imageSrc} alt={btn.title}/>  
-                      </LazyLoad>
-                    </button>)
+                    navButtons.map((btn: any) => 
+                    <LazyLoad key={btn.title}>
+                      <button className='nav-btn' 
+                      onClick={() => handleMenuButtonClick(btn.id)}>
+                          <img className='btn-image' src={btn.imageSrc} alt={btn.title}/>  
+                      </button>
+                    </LazyLoad>) 
+
                   }
                 </div>
           </motion.div>

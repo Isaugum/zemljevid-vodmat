@@ -11,6 +11,9 @@ function App() {
 
   return (
     <>
+    <div className='big-screen-error'>
+      Stran je dostopna zgolj za mobilne naprave
+    </div>
     <div className='container'>
         {/* <AnimatePresence>
           <motion.div
