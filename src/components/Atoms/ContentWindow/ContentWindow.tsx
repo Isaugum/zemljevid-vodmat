@@ -31,7 +31,7 @@ const ContentWindow = ({ contentID, closeContent }: ContentProps ) => {
           <div className='content-window'>
             {
               !contentData.content.answer && !(contentData.title === 'Razgledi') &&
-              <h1 style={{ marginBottom: '2rem'}}>{contentData.title}</h1>
+              <h1 style={{ marginBottom: ''}}>{contentData.title}</h1>
             }
             {
               contentData.content.text && !Array.isArray(contentData.content.text) &&
