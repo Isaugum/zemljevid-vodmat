@@ -30,7 +30,7 @@ const SlideshowComponent = ({ imageArray, textArray, textShown, currentPage, set
             <p>{textArray[currentPage - 1]}</p>
             :
             <LazyLoad>
-             <img src={imageArray[currentPage - 1]} alt='' /> 
+             <img src={imageArray[currentPage - 1]} alt='' style={{ maxHeight: '17rem', maxWidth: '17rem'}} /> 
             </LazyLoad>
           }
           </motion.div>

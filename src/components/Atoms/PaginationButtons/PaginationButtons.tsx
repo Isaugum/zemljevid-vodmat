@@ -32,9 +32,11 @@ const PaginationButtons = ({ pagesTotal, currentPage, setCurrentPage, onTextSwit
       {
         onTextSwitch &&
         <button onClick={() => onTextSwitch((value: boolean) => !value)}>
+          <div style={{ height: '100%', width: '100%' }}>
           <LazyLoad>
             <img className='book-img' src='/assets/images/icons/knjiga.png' alt='knjiga' />
           </LazyLoad>
+          </div>
         </button>
       }
       <button onClick={() => setPage(currentPage + 1)}>{'>'}

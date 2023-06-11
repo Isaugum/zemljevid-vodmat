@@ -31,6 +31,9 @@
         height: 50vh;
         width: 70%;
 
+        min-width: 300px;
+        min-height: 380px;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
