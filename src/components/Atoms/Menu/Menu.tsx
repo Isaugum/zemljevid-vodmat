@@ -28,7 +28,7 @@ const Menu = ({ setContentID, contentState, openContent }: MenuProps) => {
 
   return (
     <>
-      <button className='menu-button' onClick={() => handleMenu()}><img src='/assets/images/icons/lupa.png' alt='x' /></button>
+      <button className='menu-button' onClick={() => handleMenu()}><img src='/assets/images/icons/lupa.webp' alt='x' /></button>
 
       {isMainMenu &&
         <AnimatePresence>

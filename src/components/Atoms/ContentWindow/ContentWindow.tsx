@@ -15,9 +15,6 @@ const ContentWindow = ({ contentID, closeContent }: ContentProps ) => {
   const [ currentPage, setCurrentPage ] = useState(1);
   const [ textShown, setTextShown ] = useState(false);
 
-  console.log(!Array.isArray(contentData.content.image));
-
-
   return (
     <AnimatePresence>
     <motion.div className='dropdown-bg' onClick={() => closeContent(false)}/>
@@ -61,10 +58,9 @@ const ContentWindow = ({ contentID, closeContent }: ContentProps ) => {
               </LazyLoad>
               
               :
-              contentData.content.text &&
               <SlideshowComponent
                 imageArray={contentData.content.image}
-                textArray={contentData.content.text}
+                textArray={contentData.content.text && contentData.content.text}
                 textShown={textShown}
                 currentPage={currentPage}
                 setTextShown={setTextShown}

@@ -6,7 +6,7 @@ import LazyLoad from 'react-lazy-load';
 
 interface SlideshowProps {
   imageArray: string[];
-  textArray: string[];
+  textArray?: string[];
   textShown: boolean;
   currentPage: number;
   setTextShown: (value: boolean) => void;
@@ -26,16 +26,16 @@ const SlideshowComponent = ({ imageArray, textArray, textShown, currentPage, set
             className='image-text-container'
           >
           {
-            textShown === true ?
+            textArray && textShown === true ?
             <p>{textArray[currentPage - 1]}</p>
             :
             <LazyLoad>
-             <img src={imageArray[currentPage - 1]} alt='' style={{ maxHeight: '17rem', maxWidth: '17rem'}} /> 
+             <img key={imageArray[currentPage - 1]} src={imageArray[currentPage - 1]} alt='' style={{ maxHeight: '17rem', maxWidth: '17rem'}} /> 
             </LazyLoad>
           }
           </motion.div>
         </AnimatePresence>
-      <PaginationButtons onTextSwitch={setTextShown} pagesTotal={imageArray.length as number} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <PaginationButtons onTextSwitch={textArray && setTextShown} pagesTotal={imageArray.length as number} currentPage={currentPage} setCurrentPage={setCurrentPage} />
     </div>
   )
 }

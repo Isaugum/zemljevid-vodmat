@@ -1,4 +1,4 @@
-import map from '/assets/images/zemljevid.jpg';
+import map from '/assets/images/zemljevid.webp';
 import './style/background-map.scss';
 
 const BackgroundMap = () => {

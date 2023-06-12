@@ -2,62 +2,62 @@ export const navButtons = [
     {
       id: 1,
       title: 'vrtec',
-      imageSrc: '/assets/images/icons/1-vrtec_vodmat.png'
+      imageSrc: '/assets/images/icons/1-vrtec_vodmat.webp'
     },
     {
       id: 2,
       title: 'ortobar',
-      imageSrc: '/assets/images/icons/2-ortobar.png'
+      imageSrc: '/assets/images/icons/2-ortobar.webp'
     },
     {
       id: 3,
       title: 'zelezniska-postaja',
-      imageSrc: '/assets/images/icons/3-zelezniskapostaja.png'
+      imageSrc: '/assets/images/icons/3-zelezniskapostaja.webp'
     },
     {
       id: 4,
       title: 'razgledi',
-      imageSrc: '/assets/images/icons/4-razgledi.png'
+      imageSrc: '/assets/images/icons/4-razgledi.webp'
     },
     {
       id: 5,
       title: 'resvalna-postaja',
-      imageSrc: '/assets/images/icons/5-resevalna_postaja.png'
+      imageSrc: '/assets/images/icons/5-resevalna_postaja.webp'
     },
     {
       id: 6,
       title: 'sreca-v-nesreci',
-      imageSrc: '/assets/images/icons/6-serecavnesreci.png'
+      imageSrc: '/assets/images/icons/6-serecavnesreci.webp'
     },
     {
       id: 7,
       title: 'rdece-drevo',
-      imageSrc: '/assets/images/icons/7-rdecedrevo.png'
+      imageSrc: '/assets/images/icons/7-rdecedrevo.webp'
     },
     {
       id: 8,
       title: 'porodnisnica',
-      imageSrc: '/assets/images/icons/8-porodnisnica.png'
+      imageSrc: '/assets/images/icons/8-porodnisnica.webp'
     },
     {
       id: 9,
       title: 'helioport',
-      imageSrc: '/assets/images/icons/9-helioport.png'
+      imageSrc: '/assets/images/icons/9-helioport.webp'
     },
     {
       id: 10,
       title: 'abeceda',
-      imageSrc: '/assets/images/icons/10-abeceda.png'
+      imageSrc: '/assets/images/icons/10-abeceda.webp'
     },
     {
       id: 11,
       title: 'vodmatski-trg',
-      imageSrc: '/assets/images/icons/11-vodmatski_trg.png'
+      imageSrc: '/assets/images/icons/11-vodmatski_trg.webp'
     },
     {
       id: 12,
       title: 'igrisce-in-park',
-      imageSrc: '/assets/images/icons/12-igrisce_park.png'
+      imageSrc: '/assets/images/icons/12-igrisce_park.webp'
     }
   ]
 
@@ -116,10 +116,10 @@ export const navButtons = [
         type: 'images',
         content: {
           image: [
-            '/assets/images/sreca_1.png',
-            '/assets/images/sreca_2.png',
-            '/assets/images/sreca_3.png',
-            '/assets/images/sreca_4.png',
+            '/assets/images/sreca_1.webp',
+            '/assets/images/sreca_2.webp',
+            '/assets/images/sreca_3.webp',
+            '/assets/images/sreca_4.webp',
           ],
           text: [
             'SREČA JE TO DA IMAM SESTRICO, KER ME IMA TAKO RADA IN IMAVA DRUG DRUGEGA. NISEM SAM, Z NJO SE LAHKO IGRAM, SI POMAGAVA IN SKUPAJ DELAVA LUMPARIJE NPR. SI USTRIŽEVA LASE NA SKRIVAJ IN JIH SKRIJEVA POD KAVČ. SREČA V NESREČI JE, DA SE NA PRIMER ZGODI PROMETNA NESREČA ČISTO ZRAVEN BOLNICE.',
@@ -142,11 +142,11 @@ export const navButtons = [
             'BOLNI S POMOČJO RDEČIH LISTKOV HITRO OZDRAVIJO.'
           ],
           image: [
-            '/assets/images/rd_1.png',
-            '/assets/images/rd_2.png',
-            '/assets/images/rd_3.png',
-            '/assets/images/rd_4.png',
-            '/assets/images/rd_5.png',
+            '/assets/images/rd_1.webp',
+            '/assets/images/rd_2.webp',
+            '/assets/images/rd_3.webp',
+            '/assets/images/rd_4.webp',
+            '/assets/images/rd_5.webp',
           ]
         },
     },
@@ -172,7 +172,7 @@ export const navButtons = [
         title: 'Abeceda',
         type: 'image',
         content: {
-          image: '/assets/images/Pametnjakovic-strip.png'
+          image: '/assets/images/Pametnjakovic-strip.webp'
         }
     },
     {
@@ -180,15 +180,24 @@ export const navButtons = [
         title: 'Vodmatski trg',
         type: 'text',
         content: {
-          text: '/'
+          text: 'VZEMI SI ČAS ZA SOK S STARŠI ALI PRIJATELJI IN SE OZRI NAOKROG. KAM VSE VODIJO POTI IZ TRGA?'
         }
     },
     {
         id: 12,
-        title: 'Igrišce in park',
+        title: 'Igrišče in park',
         type: 'image',
         content: {
-          image: '/assets/images/park_skratki.png'
+          image: [
+            '/assets/images/park_skratki.webp',
+            '/assets/images/park1m.webp',
+            '/assets/images/park2m.webp',
+            '/assets/images/park3m.webp',
+            '/assets/images/park4m.webp',
+            '/assets/images/park5m.webp',
+            '/assets/images/park6m.webp',
+            '/assets/images/park7m.webp',
+          ]
         }
     },
   ]
