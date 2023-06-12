@@ -59,7 +59,7 @@ const SoundComponent = ({ src }: SoundComponentProps) => {
         onEnded={() => setIsPlaying(false)}
       />
       <button className="play-btn" onClick={togglePlay}>
-        {isPlaying ? '||' : '>'}
+        {!isPlaying ? <img className='play-icon' src='/assets/images/icons/play.webp' alt='play' /> : <img className='play-icon' src='/assets/images/icons/krizec.webp' alt='play' />}
       </button>
       <div className="progress-container">
         <div

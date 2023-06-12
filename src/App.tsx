@@ -14,7 +14,7 @@ function App() {
     <div className='big-screen-error'>
       Stran je dostopna zgolj za mobilne naprave
     </div>
-    <div className='container'>
+    <div className='container' style={{ overflow: 'hidden' }}>
         {/* <AnimatePresence>
           <motion.div
             className='title-bg'
@@ -34,14 +34,11 @@ function App() {
 
           </motion.div> 
         </AnimatePresence>    */}
-      <div style={{ overflow: 'hidden' }}>
         <Menu setContentID={setContentID} contentState={contentWindow} openContent={setContentWindow}/>
         {
           contentWindow &&
           <ContentWindow contentID={contentID} closeContent={setContentWindow}/>
         }
-        
-      </div>
       <BackgroundMap />
     </div>
     </>
