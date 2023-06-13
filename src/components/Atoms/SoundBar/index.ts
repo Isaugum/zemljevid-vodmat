@@ -1,0 +1,1 @@
+export { SoundBar } from './SoundBar';

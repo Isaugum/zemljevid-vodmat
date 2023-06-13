@@ -1,1 +1,0 @@
-export { BackgroundMap } from './BackgroundMap';

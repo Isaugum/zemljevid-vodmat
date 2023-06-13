@@ -1,77 +1,43 @@
-import React, { useState, useRef, useEffect } from 'react';
-import './style/sound-component.scss';
+import { useState } from 'react';
+import { SoundBar } from '..';
+import React from 'react';
 
 interface SoundComponentProps {
-  src: string;
+  data: any;
 }
 
-const SoundComponent = ({ src }: SoundComponentProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [timelineWidth, setTimelineWidth] = useState(0);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const timelineRef = useRef<HTMLDivElement | null>(null);
-
-  const togglePlay = () => {
-    const audio = audioRef.current;
-    if (isPlaying) {
-      audio?.pause();
-    } else {
-      audio?.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  const updateTime = () => {
-    const audio = audioRef.current;
-    const timeline = timelineRef.current;
-    if (audio && timeline) {
-      const percentage = (audio.currentTime / audio.duration) * 100;
-      setTimelineWidth((timeline.offsetWidth * percentage) / 100);
-    }
-  };
-
-  const handleTimelineClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const timeline = timelineRef.current;
-    if (timeline) {
-      const rect = timeline.getBoundingClientRect();
-      const offsetX = event.clientX - rect.left;
-      const percentage = (offsetX / timeline.offsetWidth) * 100;
-      const audio = audioRef.current;
-      if (audio) {
-        audio.currentTime = (audio.duration * percentage) / 100;
-        setTimelineWidth(offsetX);
-      }
-    }
-  };
-
-  useEffect(() => {
-    // Reset the component state when src changes
-    setIsPlaying(false);
-    setTimelineWidth(0);
-  }, [src]);
+const SoundComponent = React.memo(({ data }: SoundComponentProps) => {
+  const [showAnswer, setShowAnswer] = useState(false)
 
   return (
-    <div key={src} className="audio-container">
-      <audio
-        ref={audioRef}
-        src={src}
-        onTimeUpdate={updateTime}
-        onEnded={() => setIsPlaying(false)}
-      />
-      <button className="play-btn" onClick={togglePlay}>
-        {!isPlaying ? <img className='play-icon' src='/assets/images/icons/play.webp' alt='play' /> : <img className='play-icon' src='/assets/images/icons/krizec.webp' alt='play' />}
-      </button>
-      <div className="progress-container">
-        <div
-          className="timeline"
-          ref={timelineRef}
-          onClick={handleTimelineClick}
-        >
-          <div className="progress" style={{ width: `${timelineWidth}px` }} />
-        </div>
+    <>
+      <h1 className='text-xl text-center font-bold'>{data.title}</h1>
+      <div className='w-full h-full flex justify-center items-center flex-col'>
+        {
+          data.subtype === 'text' || data.subtype === 'riddle' &&
+          <div className='h-full text-center items-center justify-center flex flex-col'>
+            <p className='text-sm'>{data.content.text}</p>
+            {
+              data.subtype === 'riddle' &&
+              <div onClick={() => setShowAnswer((value: boolean) => !value)}>
+                <button className='h-16 w-16 mt-6 mb-4'>
+                  {
+                    !showAnswer ?
+                    <img className='h-full w-full' src='/assets/images/icons/vprasaj.webp' alt='vprasaj' />
+                    :
+                    <img className='h-full w-full' src={data.content.answer} alt='vprasaj' />
+                  }
+                </button>
+                <p>{!showAnswer ? 'Prikaži odgovor' : 'Skrij odgovor'}</p>
+              </div>
+
+            }
+          </div>
+        }
+        <SoundBar src={data.content.sound} />
       </div>
-    </div>
-  );
-};
+    </>
+  )
+});
 
 export { SoundComponent };

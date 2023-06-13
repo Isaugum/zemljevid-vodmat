@@ -1,43 +1,34 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 import { PaginationButtons } from '../PaginationButtons/PaginationButtons'
-import './style/slideshow.scss';
-import LazyLoad from 'react-lazy-load';
+import React from 'react';
 
 
 interface SlideshowProps {
-  imageArray: string[];
-  textArray?: string[];
-  textShown: boolean;
-  currentPage: number;
-  setTextShown: (value: boolean) => void;
-  setCurrentPage: (value: number) => void;
+  data: any;
 }
 
-const SlideshowComponent = ({ imageArray, textArray, textShown, currentPage, setTextShown, setCurrentPage }: SlideshowProps) => {
+const SlideshowComponent = React.memo(({ data }: SlideshowProps) => {
+  const [ page, setPage ] = useState(0);
+  const [ showText, setShowText ] = useState(false);
 
   return (
-    <div className='multi-image-container'>
-        <AnimatePresence>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-
-            className='image-text-container'
-          >
-          {
-            textArray && textShown === true ?
-            <p>{textArray[currentPage - 1]}</p>
-            :
-            <LazyLoad>
-             <img key={imageArray[currentPage - 1]} src={imageArray[currentPage - 1]} alt='' style={{ maxHeight: '17rem', maxWidth: '17rem'}} /> 
-            </LazyLoad>
-          }
-          </motion.div>
-        </AnimatePresence>
-      <PaginationButtons onTextSwitch={textArray && setTextShown} pagesTotal={imageArray.length as number} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-    </div>
+    <>
+      <h1 className='text-xl text-center font-bold'>{data.title} - {page + 1}</h1>
+      <div className='w-full h-full flex justify-center items-center flex-col'>
+        {
+          data.subtype === 'text' ?
+          !showText ?
+          <img key={`${page}_${data.content.image[page]}`} className='h-52' src={data.content.image[page]} />
+          :
+          <p key={`${page}_${data.content.text[page]}`} className='h-52 text-sm text-center flex flex-col justify-center items-center'>{data.content.text[page]}</p> 
+          :
+          <img key={`${page}_${data.content.image[page]}`} className='h-52' src={data.content.image[page]} />
+        }
+        
+        <PaginationButtons pagesTotal={data.content.image.length} currentPage={page} setCurrentPage={setPage} textSwitch={data.subtype === 'text'} onTextSwitch={setShowText} />
+      </div>
+    </>
   )
-}
+});
 
 export { SlideshowComponent };

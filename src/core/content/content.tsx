@@ -21,13 +21,13 @@ export const navButtons = [
     },
     {
       id: 5,
-      title: 'resvalna-postaja',
+      title: 'resevalna-postaja',
       imageSrc: '/assets/images/icons/5-resevalna_postaja.webp'
     },
     {
       id: 6,
       title: 'sreca-v-nesreci',
-      imageSrc: '/assets/images/icons/6-serecavnesreci.webp'
+      imageSrc: '/assets/images/icons/6-srecavnesreci.webp'
     },
     {
       id: 7,
@@ -81,17 +81,18 @@ export const navButtons = [
     {
         id: 3,
         title: 'Železniška postaja',
-        type: 'text+sound',
+        type: 'sound',
+        subtype: 'riddle',
         content: {
           text:'"SMEŠNA JE TA HIŠA, NIMA OKEN NIMA VRAT, V NJEJ POČAKAŠ, DA PRIDE VLAK."',
           sound: '/assets/sounds/vlakpostaja.mp3',
-          answer: 'Železniška postaja'
+          answer: '/assets/images/icons/3-zelezniskapostaja.webp'
         }
     },
     {
         id: 4,
         title: 'Razgledi',
-        type: 'sound',
+        type: 'multi-sound',
         content: {
           sound: [
             '/assets/sounds/razgledi_1.m4a',
@@ -113,7 +114,8 @@ export const navButtons = [
     {
         id: 6,
         title: 'Sreča v nesreči',
-        type: 'images',
+        type: 'multi-image',
+        subtype: 'text',
         content: {
           image: [
             '/assets/images/sreca_2.webp',
@@ -132,7 +134,8 @@ export const navButtons = [
     {
         id: 7,
         title: 'Rdeče drevo',
-        type: 'images',
+        type: 'multi-image',
+        subtype: 'text',
         content: {
           text: [
             'OB ROBU VODMATSKEGA TRGA RASTE DREVO, KI PRINAŠA SREČO BOLNIM LJUDEM.',
@@ -161,10 +164,12 @@ export const navButtons = [
     {
         id: 9,
         title: 'Helioport',
-        type: 'text',
+        type: 'sound',
+        subtype: 'riddle',
         content: {
           text: 'NI PTICA, ČEPRAV IMA KRILA, V SVOJEM TRBUŠČKU PILOTA, ZDRAVNIKA IN PACIENTA SKRIVA. ',
-          sound: '/assets/sounds/helikopter.aac'
+          sound: '/assets/sounds/helikopter.aac',
+          answer: '/assets/images/icons/minihelikopter.webp'
         }
     },
     {
@@ -186,7 +191,7 @@ export const navButtons = [
     {
         id: 12,
         title: 'Igrišče in park',
-        type: 'image',
+        type: 'multi-image',
         content: {
           image: [
             '/assets/images/park_skratki.webp',

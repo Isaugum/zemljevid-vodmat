@@ -1,64 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
 
 * {
     margin: 0;
     padding: 0;
 
-    font-family: 'Walter Turncoat';
+    font-family: 'Walter Turncoat', sans-serif;
 }
 
-$breakpoint-tablet: 900px;
-
-.big-screen-error {
-    display: none;
-}
-
-.container {
-    height: 100vh;
-    width: 100%;
-
-    display: block; // By default, show the div
-
-    overflow: auto;
-
-    .title-bg {
-        position: absolute;
-
-        height: 100vh;
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        background: white;
-        z-index: 0;
-    }
-}
-
-@media (min-width: $breakpoint-tablet) {
-    .container {
-       display: none; // Hide the div on screens larger than the tablet breakpoint 
-    }
-
-    .big-screen-error {
-
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        height: 100%;
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        z-index: 100;
-
-        color: white;
-
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/zemljevid.png');
-
-    }
+button {
+    background: none;
 }

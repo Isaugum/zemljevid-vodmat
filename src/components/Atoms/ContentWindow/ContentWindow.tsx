@@ -1,77 +1,51 @@
-import './style/content-window.css';
+
 import { AnimatePresence, motion } from 'framer-motion';
 import { contentContent } from '../../../core/content/content';
-import { PaginationButtons, SlideshowComponent, SoundComponent } from '..';
-import { useState } from 'react';
-import LazyLoad from 'react-lazy-load';
-
+import React, { useMemo } from 'react';
+import { ImageComponent, SlideshowComponent, SoundComponent, SoundSlideshow, TextComponent } from '..';
 interface ContentProps {
   contentID: number;
-  closeContent: (value: boolean) => void;
 }
 
-const ContentWindow = ({ contentID, closeContent }: ContentProps ) => {
+const ContentWindow = React.memo(({ contentID }: ContentProps ) => {
   const contentData = contentContent[contentID -1];
-  const [ currentPage, setCurrentPage ] = useState(1);
-  const [ textShown, setTextShown ] = useState(false);
+
+  const componentToRender = useMemo(() => {
+    switch(contentData.type) {
+      case 'text':
+        return <TextComponent data={contentData} />
+      case 'sound':
+        return <SoundComponent data={contentData} />
+      case 'image':
+        return <ImageComponent data={contentData}/>
+      case 'multi-image':
+        return <SlideshowComponent  data={contentData}/>
+      case 'multi-sound': 
+        return <SoundSlideshow data={contentData}/>
+      default:
+        break;
+    }
+  }, [contentData]);
 
   return (
+    <>
     <AnimatePresence>
-    <motion.div className='dropdown-bg' onClick={() => closeContent(false)}/>
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
 
-      className='content-container'
-    >
-          <div className='content-window'>
-            {
-              !contentData.content.answer && !(contentData.title === 'Razgledi') &&
-              <h1 style={{ marginBottom: ''}}>{contentData.title}</h1>
-            }
-            {
-              contentData.content.text && !Array.isArray(contentData.content.text) &&
-              <p className='text-component'>{contentData.content.text}</p>
-            }
-            {
-              contentData.content.sound && (
-              !Array.isArray(contentData.content.sound) ?
-              <SoundComponent src={contentData.content.sound} />
-              :
-              <div className='multi-sound-container'>
-                {
-                  contentData.title === 'Razgledi' &&
-                  <h1>Razgled {currentPage}</h1>
-                }
-                <div className='sound-page'>
-                  <SoundComponent src={contentData.content.sound[currentPage - 1]} />
-                  <PaginationButtons pagesTotal={contentData.content.sound?.length as number} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-                </div>
-              </div>)
-            }
-            {
-              contentData.content.image && (
-              !Array.isArray(contentData.content.image) ?
-              <LazyLoad>
-                <img src={contentData.content.image} alt={contentData.title} style={{ maxHeight: '17rem', maxWidth: '17rem'}} />
-              </LazyLoad>
-              
-              :
-              <SlideshowComponent
-                imageArray={contentData.content.image}
-                textArray={contentData.content.text && contentData.content.text}
-                textShown={textShown}
-                currentPage={currentPage}
-                setTextShown={setTextShown}
-                setCurrentPage={setCurrentPage}
-              />
-              )
-            }
-          </div>
-    </motion.div>
-  </AnimatePresence>      
+        className='absolute top-0 left-0 h-screen w-screen flex flex-col items-center justify-center'
+      >
+      <div className='relative flex flex-col justify-start items-center rounded-3xl top-10 w-5/6 h-3/5 bg-orange/80 z-30 py-6 px-6 overflow-hidden'>
+        {
+          componentToRender
+        }
+      </div>
+      </motion.div>
+    </AnimatePresence>
+    </>
   )
-}
+});
 
 export { ContentWindow };
