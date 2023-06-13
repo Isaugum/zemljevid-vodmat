@@ -32,7 +32,7 @@ const PaginationButtons = React.memo(({ pagesTotal, currentPage, setCurrentPage,
       {
         textSwitch && onTextSwitch &&
         <button onClick={() => onTextSwitch((value: boolean) => !value)}>
-          <img className='h-16 w-full' src='/assets/images/icons/knjiga.webp' alt='knjiga' />
+          <img className='h-16 w-16' src='/assets/images/icons/knjiga.webp' alt='knjiga' />
         </button>
       }
       <button className='py-2 px-4 bg-orange-second rounded-lg ml-2' onClick={() => setPage(currentPage + 1)}>{'>'}

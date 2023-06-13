@@ -39,7 +39,7 @@ const Menu = React.memo(({ setContentID, contentState, openContent }: MenuProps)
       <LazyLoad key={`${btn.title}_${index}`}>
         <button className='h-full w-full flex justify-center items-center' 
           onClick={() => handleMenuButtonClick(btn.id)}>
-          <img className='h-6/12 w-6/12' src={btn.imageSrc} alt={btn.title}/>  
+          <img className='h-6/12 w-6/12 md:h-4/12 md:w-4/12 lg:w-2/12 lg:h-2/12' src={btn.imageSrc} alt={btn.title}/>  
         </button>
       </LazyLoad>)
   }, []);
@@ -61,7 +61,7 @@ const Menu = React.memo(({ setContentID, contentState, openContent }: MenuProps)
             animate={{ opacity: 1, right: 20 }}
             transition={{ duration: 0.3 }}
 
-            className='absolute top-32 rounded-3xl right-10 w-3/4 h-3/4 bg-orange/80 grid grid-cols-3 items-center z-30 py-6'
+            className='overflow-auto absolute top-32 rounded-3xl right-10 w-3/4 h-3/4 md:h-3/5 bg-orange/80 grid grid-cols-3 items-center z-30 py-6'
           >
             {
               buttonsRender()

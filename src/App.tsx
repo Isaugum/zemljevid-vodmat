@@ -14,7 +14,7 @@ function App() {
   return (
     <>
     <div className='h-screen w-screen overflow-x-auto'>
-        <img src={map} className='h-screen z-0 max-w-none' />
+        <img src={map} className='max-md:h-screen z-0 max-w-none md:overflow-hidden' />
         <Menu setContentID={setContentID} contentState={contentWindow} openContent={setContentWindow}/>
         {
           contentWindow &&

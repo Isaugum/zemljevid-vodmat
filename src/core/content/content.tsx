@@ -65,8 +65,10 @@ export const navButtons = [
     {
         id: 1,
         title: 'Vrtec Vodmat',
-        type: 'text',
+        type: 'image',
+        subtype: 'text',
         content: {
+          image: '/assets/images/logo.webp',
           text: 'LETA 1979 JE NASTAL LOGOTIP VRTCA VODMAT. OBLIKOVALA GA JE MAMA VAROVANCA VRTCA, GA. ZALA DOBNIKAR. TO JE BIL EDEN PRVIH LOGOTIPOV.' 
         }  
     },
@@ -158,7 +160,7 @@ export const navButtons = [
         title: 'Porodnišnica',
         type: 'image',
         content: {
-          image: '/assets/images/dojenclni.gif'
+          image: '/assets/images/porodnisnica.gif'
         }   
     },
     {
@@ -183,9 +185,9 @@ export const navButtons = [
     {
         id: 11,
         title: 'Vodmatski trg',
-        type: 'text',
+        type: 'image',
         content: {
-          text: 'VZEMI SI ČAS ZA SOK S STARŠI ALI PRIJATELJI IN SE OZRI NAOKROG. KAM VSE VODIJO POTI IZ TRGA?'
+          image: '/assets/images/vodmat-trg.webp'
         }
     },
     {

@@ -37,7 +37,7 @@ const ContentWindow = React.memo(({ contentID }: ContentProps ) => {
 
         className='absolute top-0 left-0 h-screen w-screen flex flex-col items-center justify-center'
       >
-      <div className='relative flex flex-col justify-start items-center rounded-3xl top-10 w-5/6 h-3/5 bg-orange/80 z-30 py-6 px-6 overflow-hidden'>
+      <div className='relative overflow-y-auto flex flex-col justify-start items-center rounded-3xl top-10 w-5/6 h-3/5 bg-orange/80 z-30 py-6 lg:py-10 px-6 overflow-hidden'>
         {
           componentToRender
         }
