@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { navButtons } from '../../../core/content/content';
 import { AnimatePresence, motion } from 'framer-motion';
 import LazyLoad from 'react-lazy-load';
