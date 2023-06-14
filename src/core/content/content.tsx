@@ -186,8 +186,10 @@ export const navButtons = [
         id: 11,
         title: 'Vodmatski trg',
         type: 'image',
+        subtype: 'text',
         content: {
-          image: '/assets/images/vodmat-trg.webp'
+          image: '/assets/images/vodmat-trg.webp',
+          text: 'VZEMI SI ČAS ZA SOK S STARŠI ALI PRIJATELJI IN SE OZRI NAOKROG. KAM VSE VODIJO POTI IZ TRGA?'
         }
     },
     {
