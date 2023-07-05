@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PaginationButtons, SoundBar } from "..";
+import { PaginationButtons } from "..";
 
 const Slideshow = (data: any) => {
   const [page, setPage] = useState(0);
