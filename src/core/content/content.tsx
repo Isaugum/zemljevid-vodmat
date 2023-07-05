@@ -273,7 +273,7 @@ export const navButtons = [
         content: [
           {
             type: 'text-image',
-            text: 'V KROGU DREVESA STOJIJOr\r\nTAM ŠKRATI ŽIVIJO.\r\nROŽE KRADEJO,\r\nDA JIH V VAZE SPRAVIJO.\r\nIZ NJIH BARVE NAREDIJO,\r\nDA HIŠO LEPŠO NAREDIJO.\r\nNARAVO IN OTROKE NARIŠEJO\r\nIN CELO STENO POPIŠEJO.',
+            text: 'V KROGU DREVESA STOJIJO\r\nTAM ŠKRATI ŽIVIJO.\r\nROŽE KRADEJO,\r\nDA JIH V VAZE SPRAVIJO.\r\nIZ NJIH BARVE NAREDIJO,\r\nDA HIŠO LEPŠO NAREDIJO.\r\nNARAVO IN OTROKE NARIŠEJO\r\nIN CELO STENO POPIŠEJO.',
             image: '/assets/images/park_skratki.webp',
           },
           {
