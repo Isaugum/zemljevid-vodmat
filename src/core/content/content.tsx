@@ -312,4 +312,14 @@ export const navButtons = [
           }
         ]
     },
+    {
+      id: 14,
+      title: 'Ustvarjalci vsebine',
+      content: [
+        {
+          type: 'image',
+          text: 'Otroci skupin Levčki, Sončki, Krtki, Žabice in Pingvini enote Vodmat v šolskem letu 2022/23\r\nVzgojiteljice: Urša Luznar, Jana Pevec, Vanja Kep, Ana Grad Rožman, Melita Rožič\r\nPomočnice vzgojiteljic: Anita Zidar, Vesna Košir, Žaklina Zahirović, Katarina Blagojevič, Maruša Novak\r\nUmetniki: Lene Lekše, Nika Rupnik, Ida Mlakar Črnič\r\n Vodja projekta: Darja Štirn\r\nOdgovorna oseba: Marta Korošec, ravnateljica vrtca\r\nTisk JAC \r\nJunij 2023\r\n',
+        },
+      ]
+  },
   ]

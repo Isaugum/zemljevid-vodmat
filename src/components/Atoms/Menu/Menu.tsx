@@ -46,6 +46,14 @@ const Menu = () => {
                 <MenuButtons key={btn.title} src={btn.imageSrc} title={btn.title} id={btn.id} />
               )
             }
+            <div className='col-start-2 w-full h-full flex items-center justify-center'
+              onClick={() => {
+                !!isMenu && openMenu(false);
+                setContentIndex(13)
+              }
+            }>
+             <button className='text-sm w-max mt-4 border border-black rounded-full px-4 py-2'>Ustvarjalci vsebine</button> 
+            </div> 
           </motion.div>
         </motion.div>
       </AnimatePresence>
