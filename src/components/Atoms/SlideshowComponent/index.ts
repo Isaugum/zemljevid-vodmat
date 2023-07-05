@@ -1,1 +1,0 @@
-export { SlideshowComponent } from './SlideshowComponent';

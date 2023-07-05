@@ -1,0 +1,1 @@
+export { RiddleComponent } from './RiddleComponent';

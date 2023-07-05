@@ -1,21 +1,16 @@
-import React from "react";
 
-interface ImageComponentProps {
-  data: any;
-}
-
-const ImageComponent = React.memo(({ data }: ImageComponentProps) => {
+const ImageComponent = (data: any) => {
 
   return (
-    <>
-      <h1 className='text-xl text-center font-bold'>{data.title}</h1>
+    <div className='flex flex-col items-center justify-center text-lg text-center'>
+      <img className='max-w-[250px] md:max-w-[400px]' src={data.data.image} alt={data.data.title} />
+      {data.data.text && <div className='py-4 my-4 border-y border-black'>{data.data.text}</div>}
       {
-        data.subtype === 'text' &&
-        <p className='py-10 text-sm text-center flex flex-col justify-center items-center'>{data.content.text}</p> 
+        data.data.link &&
+        <a className='uppercase' target="_blank" href={data.data.link}>Več o vrtcu: <span className='text-blue-500'>{data.data.linkText}</span></a>
       }
-      <img className='h-full p-6' src={data.content.image} />
-    </>
+    </div>
   )
-});
+}
 
 export { ImageComponent };

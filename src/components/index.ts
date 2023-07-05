@@ -1,10 +1,11 @@
-
-export { Menu } from './Atoms';
-export { ContentWindow } from './Atoms';
-export { SoundComponent } from './Atoms';
-export { PaginationButtons } from './Atoms';
-export { SlideshowComponent } from './Atoms';
-export { TextComponent } from './Atoms';
-export { ImageComponent } from './Atoms';
-export { SoundSlideshow } from './Atoms';
 export { SoundBar } from './Atoms';
+export { Menu } from './Atoms';
+export { MenuButtons } from './Atoms';
+export { ContentWindow } from './Atoms';
+export { ImageComponent } from './Atoms';
+export { SoundComponent } from './Atoms';
+export { RiddleComponent } from './Atoms';
+export { Slideshow } from './Atoms';
+export { Soundshow } from './Atoms';
+export { PaginationButtons } from './Atoms';
+export { RiddleSlideshow } from './Atoms';

@@ -67,8 +67,8 @@ const SoundBar = React.memo(({src}: SoundBarProps) => {
           ref={timelineRef}
           onClick={handleTimelineClick}
         >
-          <div className="absolute left-0 top-0 h-full bg-orange w-full rounded-full overflow-hidden">
-            <div className="absolute left-0 top-0 h-full bg-gray-200" style={{ width: `${timelineWidth}px` }} />
+          <div className="absolute left-0 top-0 h-full bg-gray-200 w-full rounded-full overflow-hidden">
+            <div className="absolute left-0 top-0 h-full bg-white" style={{ width: `${timelineWidth}px` }} />
           </div>
           
         </div>
