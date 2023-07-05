@@ -3,8 +3,6 @@ import { PaginationButtons, RiddleComponent } from "..";
 
 const RiddleSlideshow = (data: any) => {
   const [page, setPage] = useState(0);
-  console.log(data);
-  console.log(data.data[page]);
 
   return (
     <div className='flex flex-col justify-evenly items-center w-full'>

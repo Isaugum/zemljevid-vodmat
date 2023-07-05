@@ -16,7 +16,7 @@ const Menu = () => {
     <>
     <div className='absolute top-10 right-8 z-50 bg-orange rounded-full p-2 group hover:scale-105 transition duration-300 border-2 border-white'
       onClick={() => {
-        openMenu((value: boolean) => !value);
+        openMenu(!isMenu);
         contentIndex !== 0 && setContentIndex(0);
       }
     }  

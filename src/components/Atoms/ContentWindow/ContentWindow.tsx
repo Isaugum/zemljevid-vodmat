@@ -45,7 +45,10 @@ const ContentWindow = () => {
             <motion.div className=' relative overflow-y-auto p-12 text-3xl max-md:top-20 md:left-20 w-5/6 md:w-3/5 h-3/4 bg-black/50 z-50 bg-orange rounded-xl flex flex-col justify-content items-center'
               initial={{ opacity: 0, x: -300 }}
               animate={{ opacity: 1, x: 0 }}>
-              <h1 className='text-center h-12 mb-10'>{contentData?.title}</h1>
+              <div className='w-full flex justify-between items-start mb-10'>
+              <h1>{contentData?.title}</h1>
+                <button className='' onClick={() => setContentIndex(0)}>X</button>    
+              </div>
                 {
                   Array.isArray(contentData.content) &&
                     contentData.content.length > 1 ?

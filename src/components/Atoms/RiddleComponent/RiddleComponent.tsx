@@ -1,8 +1,11 @@
-import { useState } from "react";
 import { SoundBar } from "..";
+import { useContentState } from "../../../state/content.state";
 
 const RiddleComponent = (data: any) => {
-  const [showAnswer, setShowAnswer] = useState(false);
+  const [showAnswer, setShowAnswer] = useContentState((store: any) => ([
+    store.showAnswer,
+    store.setShowAnswer
+  ]));
 
   return (
     <div className='flex flex-col justify-center items-center text-lg'>
@@ -10,7 +13,7 @@ const RiddleComponent = (data: any) => {
         {data.data.answerText &&
           <button 
             className='border border-black my-4 px-4 py-2 rounded-full'
-            onClick={() => setShowAnswer((value: boolean) => !value)}>{showAnswer ? 'Skrij odgovor' : 'Prikaži odgovor'}
+            onClick={() => setShowAnswer(!showAnswer)}>{showAnswer ? 'Skrij odgovor' : 'Prikaži odgovor'}
           </button>
         }
         {

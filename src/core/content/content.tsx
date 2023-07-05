@@ -106,6 +106,7 @@ export const navButtons = [
           {
             type: 'riddle',
             text:'"DOLGA KAČA SE ČEZ HRIBE IN DOLINE VIJE, ČIHA-PUHA TU IN TAM »ZAVPIJE«"',
+            sound: '/assets/sounds/vlak.wav',
             answerText: 'Vlak'
           }
       ]

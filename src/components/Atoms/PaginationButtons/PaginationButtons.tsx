@@ -1,3 +1,4 @@
+import { useContentState } from "../../../state/content.state";
 
 interface PaginationButtonsProps {
   page: number;
@@ -6,6 +7,10 @@ interface PaginationButtonsProps {
 }
 
 const PaginationButtons = ({ page, setPage, total }: PaginationButtonsProps) => {
+  const [showAnswer, setShowAnswer] = useContentState((store: any) => ([
+    store.showAnswer,
+    store.setShowAnswer
+  ]));
 
   const updatePage = (value: number) => {
     if(page + value < 0) {
@@ -18,6 +23,10 @@ const PaginationButtons = ({ page, setPage, total }: PaginationButtonsProps) => 
       return;
     }
 
+    if(showAnswer) {
+      setShowAnswer(false);
+    }
+    
     setPage(page + value);
   }
 
