@@ -5,6 +5,10 @@
   font-family: "Walter Turncoat", sans-serif;
 }
 
+div {
+  white-space: pre-wrap;
+}
+
 button {
   background: none;
 }/*# sourceMappingURL=index.css.map */
