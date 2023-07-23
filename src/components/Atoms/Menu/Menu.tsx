@@ -37,7 +37,7 @@ const Menu = () => {
               }
             }
           ></div>
-          <motion.div className='absolute overflow-y-auto bg-orange bottom-10 right-10 h-3/4 w-3/4 lg:w-1/2 rounded-xl grid grid-cols-3'
+          <motion.div className='absolute overflow-y-auto md:pb-4 bg-orange bottom-10 right-10 h-3/4 w-3/4 lg:w-1/2 rounded-xl grid grid-cols-3'
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
           >
@@ -46,14 +46,18 @@ const Menu = () => {
                 <MenuButtons key={btn.title} src={btn.imageSrc} title={btn.title} id={btn.id} />
               )
             }
-            <div className='col-start-2 w-full h-full flex items-center justify-center'
-              onClick={() => {
-                !!isMenu && openMenu(false);
-                setContentIndex(13)
-              }
-            }>
-             <button className='text-sm w-max mt-4 border border-black rounded-full px-4 py-2'>Ustvarjalci vsebine</button> 
-            </div> 
+            <div className='flex max-md:flex-col justify-center items-center col-start-1 col-end-4 mt-4'>
+              <button className='text-xs md:text-sm w-max border border-black rounded-full px-2 md:px-4 py-2' onClick={() => {
+                  !!isMenu && openMenu(false);
+                  setContentIndex(13)
+                }
+              }>Priporočena literatura</button>
+              <button className='text-xs max-md:mt-2 md:ml-2 md:text-sm w-max border border-black rounded-full px-2 md:px-4 py-2' onClick={() => {
+                  !!isMenu && openMenu(false);
+                  setContentIndex(14)
+                }
+              }>Ustvarjalci vsebine</button> 
+            </div>
           </motion.div>
         </motion.div>
       </AnimatePresence>
