@@ -118,22 +118,26 @@ export const navButtons = [
           {
             type: 'sound',
             sound: '/assets/sounds/razgledi_1.m4a',
-            text: 'Ljubljanski grad'
+            text: 'Ljubljanski grad',
+            image:' assets/images/razgledi_grad.jpg'
           },
           {
             type: 'sound',
             sound: '/assets/sounds/razgledi_2.m4a',
-            text: 'Dimnik v mostah'
+            text: 'Dimnik v mostah',
+            image:' assets/images/razgledi_dimnik.jpg'
           },
           {
             type: 'sound',
             sound: '/assets/sounds/razgledi_3.m4a',
-            text: 'Golovec'
+            text: 'Golovec',
+            image:' assets/images/razgledi_golovec.jpg'
           },
           {
             type: 'sound',
             sound: '/assets/sounds/razgledi_4.m4a',
-            text: 'Povodni mož'
+            text: 'Povodni mož',
+            image:' assets/images/razgledi_moz.jpg'
           }
         ]
     },

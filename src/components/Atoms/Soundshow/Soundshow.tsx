@@ -9,7 +9,7 @@ const Soundshow = (data: any) => {
       <div className='text-center border-b border-black pb-4 mb-4'>{data.data[page].text}</div>
       {
         !!data.data[page].image &&
-        <img className='max-w-[250px] md:max-w-[400px]' src={data.data.image} alt={data.data.title} />
+        <img className='max-w-[250px] md:max-w-[400px] py-2' src={data.data[page].image} alt={data.data[page].title} />
       }
       <SoundBar src={data.data[page].sound} />
       <PaginationButtons page={page} setPage={setPage} total={data.data.length}/>
