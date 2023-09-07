@@ -107,6 +107,7 @@ export const navButtons = [
             type: 'riddle',
             text:'"DOLGA KAČA SE ČEZ HRIBE IN DOLINE VIJE, ČIHA-PUHA TU IN TAM »ZAVPIJE«"',
             sound: '/assets/sounds/vlak.wav',
+            answer: '/assets/images/vlak.webp',
             answerText: 'Vlak'
           }
       ]
@@ -148,6 +149,7 @@ export const navButtons = [
           {
             type: 'riddle',
             text: '"V TEJ HIŠI POLNO REŠEVALNIH AVTOV JE DOMA, KO RABIŠ POMOČ, POKLIČEŠ 112."',
+            answer: '/assets/images/resevalna_postaja.webp',
             answerText: 'Reševalna postaja' 
           },
           {
@@ -204,7 +206,7 @@ export const navButtons = [
           {
             type: 'text-image',
             image: '/assets/images/rd_3.webp',
-            text: 'KO ZAPIHA VETER ZDRAVNIKI ODPREJJO OKNA BOLNIŠNIC IN LISTI PRILETIJO K BOLNIKOM.',
+            text: 'KO ZAPIHA VETER ZDRAVNIKI ODPREJO OKNA BOLNIŠNIC IN LISTI PRILETIJO K BOLNIKOM.',
           },
           {
             type: 'text-image',
